@@ -1,6 +1,6 @@
 package patterns.visitor;
 
-public class ItemWeightBased extends Item <VisitorItemWeightBased>{
+public class ItemWeightBased extends Item implements Visitable<VisitorItemWeightBased>{
 
   private Double weight;
 

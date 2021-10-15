@@ -5,8 +5,8 @@ package patterns.visitor;
  * Ogni elemento visitabile dovrà implementare un metodo accept(Visitor v) che riceve un {@link Visitor}
  * e richiama il relativo visit(Item).
  */
-public interface Visitable {
+public interface Visitable<V extends Visitor> {
 
-  void accept(Visitor visitor);
+  void accept(V visitor);
 
 }
