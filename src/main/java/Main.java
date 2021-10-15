@@ -13,6 +13,12 @@ import patterns.factory.AutoFactory;
 import patterns.factory.Telefono;
 import patterns.factory.TelefonoFactory;
 import patterns.singleton.SingletonExample;
+import patterns.visitor.ItemPiecesBased;
+import patterns.visitor.ItemWeightBased;
+import patterns.visitor.ItemWorkedHourBased;
+import patterns.visitor.VisitorItemPiecesBased;
+import patterns.visitor.VisitorItemWeightBased;
+import patterns.visitor.VisitorItemWorkedHoursBased;
 
 public class Main {
 
@@ -46,6 +52,13 @@ public class Main {
 
     System.out.println("***** TEST ADAPTER *****");
     testAdapterPattern();
+
+    ///////////////////////////////
+    //// TEST VISITOR ADAPTER ////
+    ///////////////////////////////
+
+    System.out.println("***** TEST VISITOR *****");
+    testVisitorPattern();
 
   }
 
@@ -96,6 +109,20 @@ public class Main {
     singleton1.getInformation();
 
     singleton2.getInformation();
+  }
+
+  private static void testVisitorPattern(){
+
+    ItemPiecesBased gommeAuto = new ItemPiecesBased("Gomme Continental", 100.50, 4);
+    ItemWeightBased patate = new ItemWeightBased("Patate del casentino", 5.10, 10.0);
+    ItemWorkedHourBased softwareDeveloping=new ItemWorkedHourBased("javaDeveloper", 31.25, 8.0 );
+    // istanzia i visitor concreti
+    VisitorItemWeightBased visitorItemWeightBased = new VisitorItemWeightBased();
+    VisitorItemPiecesBased visitorItemPiecesBased = new VisitorItemPiecesBased();
+    VisitorItemWorkedHoursBased visitorItemWorkedHoursBased=new VisitorItemWorkedHoursBased();
+    gommeAuto.accept(visitorItemPiecesBased);
+    patate.accept(visitorItemWeightBased);
+softwareDeveloping.accept(visitorItemWorkedHoursBased);
   }
 
 }
