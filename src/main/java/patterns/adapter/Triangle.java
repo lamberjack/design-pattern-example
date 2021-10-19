@@ -21,7 +21,6 @@ public class Triangle implements Shape {
 
     @Override
     public double area() {
-        // Heron's formula
         double p = perimeter() / 2;
         return Math.sqrt(p * (p - side1) * (p - side2) * (p - side3));
     }

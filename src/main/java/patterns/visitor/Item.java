@@ -1,9 +1,7 @@
 package patterns.visitor;
 
 /**
- * Classe astratta comune ai concreteItem, implementa l'interfaccia Visitable che la
- * vincola ad implementare accept(Visitor v); in questo caso essendo una classe astratta l'implementazione
- * di accept(Visitor v) viene demandata alle sottoclassi concrete.
+ * Classe astratta comune ai concreteItem, contiene gli attributi a comune tra essi.
  */
 public abstract class Item {
 

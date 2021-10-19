@@ -1,5 +1,9 @@
 package patterns.visitor;
 
+/**
+ * Oggetto concreto che estende la classe {@link Item} ed implementa l'interfaccia {@link Visitable}
+ * con il relativo {@link VisitorItemWeightBased} concreto.
+ */
 public class ItemWeightBased extends Item implements Visitable<VisitorItemWeightBased>{
 
   private Double weight;

@@ -1,5 +1,9 @@
 package patterns.visitor;
 
+/**
+ * Oggetto concreto che estende la classe {@link Item} ed implementa l'interfaccia {@link Visitable}
+ * con il relativo {@link VisitorItemPiecesBased} concreto.
+ */
 public class ItemPiecesBased extends Item implements Visitable <VisitorItemPiecesBased> {
 
   private Integer numberOfPieces;

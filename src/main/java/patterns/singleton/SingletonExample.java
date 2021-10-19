@@ -9,7 +9,7 @@ public class SingletonExample {
 
     }
 
-    /*
+    /**
      * Funzione che restituisce l'unica istanza della classe, inizializzandola
      * eventualmente. Il metodo è synchronized per consentire l'accesso
      * sincronizzato ad eventuali thread che potrebbero richiedere l'istanza
